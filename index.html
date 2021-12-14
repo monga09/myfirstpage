@@ -1,18 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>:::</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@700&display=swap" rel="stylesheet">
-
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@700&amp;display=swap" rel="stylesheet">
 <style>
 
-
 body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("images/l_bulb.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+
+body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-	height:100%;
 }
 
 .topnav {
@@ -39,31 +58,24 @@ body, html {
   color: white;
 }
 
-.bg_image {
-    background-image: url(images/l_bulb.jpg);
-    width: 100%;
-    background-size: cover;
-    background-position: center top;
-}
 
-.bg_image h1 {color:#fff;}
-.bg_image h1 {
-    color: #fff;
-    padding: 20px;
-    margin: 0;
-}
+ h1 {color:#fff;}
 
 
 
 
-.bg_image p {color:#fff; font-family: 'Corinthia', cursive; font-size:20px; font-size:70px;}
+p {color:#fff; font-family: 'Corinthia', cursive; font-size:20px; font-size:70px;}
 p.font-size15{font-size:35px;}
+p.font-size65{font-size:65px;}
 
 </style>
 
 
 </head>
-<body class="bg_image">
+<body>
+
+<div class="bg">
+
 <div class="topnav">
   <a class="active" href="#home">Home</a>
   <a href="#about">About</a>  
@@ -73,15 +85,17 @@ p.font-size15{font-size:35px;}
 
 </div>
 
-   <div >
+   <div>
     <h1>AK's Profile</h1>
 	<p>Think............ Out of the Box </p>
-	<p class = "font-size15">Coming soon........ </p>
+	<p class="font-size15">Coming soon........ </p>
+	
+	<p class="font-size65">Beyond your imagination... </p>
 
    
    </div>
 
-
+</div>
 
 
 
