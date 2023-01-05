@@ -1,0 +1,88 @@
+body{position:relative; background:#f5f5f5; ;}
+
+.tree{ display: block;
+    margin: 0px auto;
+    text-align: center;}
+	
+	
+	.dollar_n {
+    position: absolute;
+    top: 74%;
+    left: 43%;
+}
+
+.dollar_n img {width:50%;}
+.dollar_n1 img {width:50%;}
+.dollar_n2 img {width:50%;}
+
+
+.dollar_n1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+
+	.dollar_n2 {
+    position: absolute;
+    top: 74%;
+    right: 36%;
+}
+
+.land img {
+    width: 37%;
+}
+.land {
+  position: absolute;
+    top: 93%;
+    left: 43%;
+}
+
+.chest {
+  position: absolute;
+    top: 68%;
+    left: 47%;
+}
+
+.chest12 {
+  position: absolute;
+  top: 98%;
+    left: 45%;
+}
+
+@media (max-width:999px) {
+	
+	.tree_img{ width:100%; }
+	.dollar_n img {width: 20%;}  .dollar_n1 img {width: 20%; }   .dollar_n2 img {width: 20%;} 
+	.dollar_n1 {
+    position: absolute;
+    top: 50%;
+    left: 51%;
+}
+.dollar_n {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+}
+
+.dollar_n2 {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+}
+
+.chest12 img {width: 45%;} .chest img {width: 45%;}
+.chest12 {
+       position: absolute;
+    top: 92%;
+    left: 43%;
+}
+.chest {
+   position: absolute;
+    top: 72%;
+    left: 47%;
+}
+
+	
+	
+}
