@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Escape The Spade Game</title>
+	<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body onload="addMoney()">
+    <div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <h1>Red Card = 3 points</h1>
+            <h1>Club = 0 points</h1>
+            <h1>Spade = You lose!</h1>
+        </div>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Rules</span>
+        <div class="logo">
+            <img src="img/escapethespadelogo.png?raw=true" alt="logo" style="width: 400px; height: 200px;">
+        </div>
+        <div>
+            <img src="img/suit-1.png?raw=true" alt="" id="suits1" class="suit">
+            <img src="img/suit-1.png?raw=true" alt="" id="suits2" class="suit">
+            <img src="img/suit-1.png?raw=true" alt="" id="suits3" class="suit">
+            <img src="img/suit-1.png?raw=true" alt="" id="suits4" class="suit">
+        </div>
+        <div>
+            <br>
+            <input type="button" value="Let's Play" onclick="startGame()" class="btn">
+            <h1 id="result"></h1>
+            <h1 id="score"></h1>
+            <h1 id="points"></h1>
+
+        </div>
+    </div>
+	
+	<script>
+	var points = 0;
+function addMoney() {
+    points = prompt("Add money to play!");
+    document.getElementById("points").innerHTML = "$" + points;
+}
+function startGame() {
+    var lose = 0;
+    var score = 0;
+    var count = 0;
+    document.getElementById("result").innerHTML = "You Win!";
+    for (count = 1; count < 5; count++) {
+        var num = Math.floor((Math.random() * 4) + 1);
+        document.getElementById("suits" + count).src = "img/suit-" + num + ".png?raw=true";
+        if (num == 4) {
+            lose = 1;
+            document.getElementById("result").innerHTML = "You Lose!";
+        }
+        else if (num == 2 || num == 3) {
+            score += 3;
+        }
+        if (score == 12) {
+            score = score * 4;
+        }
+        if (score == 9) {
+            score = score * 3;
+        }
+    }
+    if (lose == 1) {
+        document.getElementById("score").innerHTML = 0;
+        points -= 8.5;
+    }
+    else {
+        points += score;
+        document.getElementById("score").innerHTML = score;
+    }
+    document.getElementById("points").innerHTML = "$" + points;
+
+    /*ranNum1 = Math.floor((Math.random() * 4) + 1);
+    ranNum2 = Math.floor((Math.random() * 4) + 1);
+    ranNum3 = Math.floor((Math.random() * 4) + 1);
+    ranNum4 = Math.floor((Math.random() * 4) + 1);
+    document.getElementById("suits1").src = "suit-" + ranNum1 + ".png";
+    document.getElementById("suits2").src = "suit-" + ranNum2 + ".png";
+    document.getElementById("suits3").src = "suit-" + ranNum3 + ".png";
+    document.getElementById("suits4").src = "suit-" + ranNum4 + ".png";
+    if (ranNum1 == 4 || ranNum2 == 4 || ranNum3 == 4 || ranNum4 == 4) {
+        document.getElementById("result").innerHTML = "You Lose!";
+    }
+    else {
+        document.getElementById("result").innerHTML = "You Win!";
+    }*/
+}
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "351px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+	
+	</script>
+	
+</body>
+
+</html>
